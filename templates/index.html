@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Summit</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+    <title>Something more than just summarising</title>
 </head>
 <body>
-	<form action="{{url_for('summary')}}" method="POST">
-		<input type="text" name="url" id="url">
-		<input type="submit" value="summarize">
-	</form>	
+    <div class="container">
+        <img src="{{url_for('static', filename='icon.png')}}" alt="Something more than just summarising" class="logo">
+        <form action="{{url_for('summary')}}" method="POST">
+            <input type="text" name="url" id="url" placeholder="Enter URL">
+            <input type="submit" value="Summarize">
+        </form>
+    </div>
 </body>
 </html>

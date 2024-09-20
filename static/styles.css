@@ -1,0 +1,114 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #111111;
+    color: #ffffff;
+}
+
+/* Container for centering content */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Header styles */
+header {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #111111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo image styles */
+.logo {
+    max-width: 300px;
+    height: auto;
+    margin-bottom: 40px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+input[type="text"] {
+    padding: 10px 0;
+    font-size: 16px;
+    border: none;
+    border-bottom: 2px solid #00FFFF;
+    background-color: transparent;
+    color: #00FFFF;
+    flex-grow: 1;
+    min-width: 0;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]::placeholder {
+    color: #00FFFF80;
+    text-align: center;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-bottom-color: #00CCCC;
+}
+
+input[type="submit"] {
+    padding: 10px 0;
+    font-size: 16px;
+    background-color: transparent;
+    color: #00FFFF;
+    border: none;
+    border-bottom: 2px solid #00FFFF;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 100px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+input[type="submit"]:hover,
+input[type="submit"]:focus {
+    background-color: #00FFFF20;
+    border-bottom-color: #00CCCC;
+    outline: none;
+}
+
+/* Main content area */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* Responsive design */
+@media (max-width: 480px) {
+    form {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    
+    input[type="text"],
+    input[type="submit"] {
+        width: 100%;
+    }
+    
+    .logo {
+        max-width: 200px;
+    }
+}

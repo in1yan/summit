@@ -3,11 +3,11 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import SRTFormatter
 from pytube import YouTube
 import requests
-# from bs4 import BeautifulSoup
+from dotenv import load_dotenv
 import os
 
 
-
+load_dotenv()
 
 def web(url):
     res = requests.get(url)
@@ -17,7 +17,7 @@ def web(url):
             }
     return data
 def summarize(data):
-    ai.configure(api_key=os.environ["gen_key"])
+    ai.configure(api_key=os.getenv("GEN_KEY"))
 
     model = ai.GenerativeModel('gemini-1.5-flash')
     base_dir = os.path.dirname(__file__)

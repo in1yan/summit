@@ -1,0 +1,145 @@
+/* .mdcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+    box-sizing: border-box;
+} */
+
+
+
+
+/* Styles for content rendered by github-md */
+
+
+github-md {
+    display: block;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    margin-top: 20px;
+    /* align-items: center; */
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* box-sizing: border-box; */
+}
+
+/* Headings */
+github-md h1, github-md h2, github-md h3, github-md h4, github-md h5, github-md h6 {
+    color: #00FFFF;
+    margin-top: 24px;
+    margin-bottom: 16px;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+github-md h1 { font-size: 2em; }
+github-md h2 { font-size: 1.5em; }
+github-md h3 { font-size: 1.25em; }
+github-md h4 { font-size: 1em; }
+github-md h5 { font-size: 0.875em; }
+github-md h6 { font-size: 0.85em; }
+
+/* Paragraphs and lists */
+github-md p, github-md ul, github-md ol {
+    margin-bottom: 16px;
+}
+
+github-md ul, github-md ol {
+    padding-left: 2em;
+}
+
+/* Links */
+github-md a {
+    color: #00CCCC;
+    text-decoration: none;
+}
+
+github-md a:hover {
+    text-decoration: underline;
+}
+
+/* Inline code */
+github-md code {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 0.2em 0.4em;
+    margin: 0;
+    font-size: 85%;
+    background-color: #2a2a2a;
+    border-radius: 3px;
+    color: #00FFFF;
+}
+
+/* Code blocks */
+github-md pre {
+    background-color: #2a2a2a;
+    border-radius: 3px;
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    margin-bottom: 16px;
+}
+
+github-md pre code {
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    white-space: pre;
+    border: 0;
+}
+
+/* Blockquotes */
+github-md blockquote {
+    padding: 0 1em;
+    color: #8b949e;
+    border-left: 0.25em solid #00FFFF;
+    margin-bottom: 16px;
+}
+
+/* Horizontal rule */
+github-md hr {
+    height: 0.25em;
+    padding: 0;
+    margin: 24px 0;
+    background-color: #00FFFF;
+    border: 0;
+}
+
+/* Tables */
+github-md table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+github-md th, github-md td {
+    padding: 6px 13px;
+    border: 1px solid #00FFFF;
+}
+
+github-md tr {
+    background-color: #1e1e1e;
+    border-top: 1px solid #00FFFF;
+}
+
+github-md tr:nth-child(2n) {
+    background-color: #2a2a2a;
+}
+
+/* Images */
+github-md img {
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: #2a2a2a;
+    border-radius: 3px;
+}
