@@ -15,6 +15,6 @@ def summary():
         content = web(url)
     summary = summarize(content)
     print(summary)
-    return render_template("summary.html", summary=summary)
+    return render_template("summary.html", summary=summary, url=url)
 if __name__ == "__main__":
     app.run(host="0.0.0.0", debug=True)

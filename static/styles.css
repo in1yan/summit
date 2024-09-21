@@ -112,3 +112,10 @@ main {
         max-width: 200px;
     }
 }
+footer {
+    align-self: center;
+    margin-bottom: 20px;
+}
+footer > *{
+    margin: 20px;
+}
