@@ -16,10 +16,10 @@ Node each topic as a headline. In case it has sub-topics or tools, use sub-headl
 For each topic or subject provide the most accurate definition without making guesses.
 
 Extract a summary of the lecture in 25 words, including the most important keynotes into a section called SUMMARY.
+Extract the most takeaway and recommendation into a section called ONE-SENTENCE TAKEAWAY. This should be a 15-word sentence that captures the most important essence of the content.
 
 Extract all the tools you noticed there was mention and gather them with one line description into a section called TOOLS.
 
-Extract the most takeaway and recommendation into a section called ONE-SENTENCE TAKEAWAY. This should be a 15-word sentence that captures the most important essence of the content.
 
 Match the timestamps to the topics. Note that input timestamps have the following format: HOURS:MINUTES:SECONDS.MILLISECONDS, which is not the same as the OUTPUT format!
 

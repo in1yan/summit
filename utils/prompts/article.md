@@ -21,5 +21,6 @@ Take a deep breath and think step by step about how to best accomplish this goal
 - Do not repeat items in the output sections.
 - Do not start items with the same opening words.
 
+In the markdown, use formatting like bold, highlight, headlines as # ## ### , blockquote as > , code block in necessary as ``` {block_code} ```, lists as * , etc. Make the output maximally readable in plain text.
 # INPUT:
 INPUT:
