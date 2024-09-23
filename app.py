@@ -17,6 +17,7 @@ def summary():
     
     summary = summarize(content, task=task)
     if request.method == "POST":
+        summary = summarize(content, task=task)
         return render_template("summary.html", summary=summary, url=url, task=task)
     return render_template("summary.html", summary=summary, url=url, task = "summary")
 if __name__ == "__main__":
