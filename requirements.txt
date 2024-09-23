@@ -1,0 +1,14 @@
+flask
+fake-useragent
+youtube-transcript-api
+requests
+pytube
+google
+google-ai-generativelanguage
+google-api-core
+google-api-python-client
+google-auth
+google-auth-httplib2
+google-generativeai
+googleapis-common-protos
+gunicorn
