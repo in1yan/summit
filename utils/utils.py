@@ -12,7 +12,7 @@ load_dotenv()
 ua = UserAgent()
 def web(url):
     headers = {
-        'User-Agent':ua.random()
+        'User-Agent':ua.random
     }
     res = requests.get(url, headers=headers)
     data = {
