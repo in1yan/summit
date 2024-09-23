@@ -10,8 +10,14 @@
 	<header>
 	<div class="container">
 	<form action="{{url_for('summary')}}" method="POST">
+		<div class="input-field">
 		<input type="text" name="url" id="url" value="{{url}}">
-		<input type="submit" value="summarize">
+		<select name="task" id="task" onchange="this.form.submit()">
+			<option value="summary" {% if task=='summary'%} selected {% endif %}>summary</option>
+			<option value="idea" {% if task=='idea'%} selected {% endif %}>Extract ideas</option>
+			<option value="wisdom" {% if task=='wisdom'%} selected {% endif %}>Extract wisdom</option>
+		</select>
+		</div>
 	</form>
 	</div>	
 	</header>

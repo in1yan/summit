@@ -3,6 +3,8 @@ body {
     font-family: Arial, sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content:center;
+    align-items:center;
     min-height: 100vh;
     margin: 0;
     background-color: #111111;
@@ -13,6 +15,7 @@ body {
 .container {
     display: flex;
     flex-direction: column;
+    justify-content:space-between;
     align-items: center;
     width: 100%;
     max-width: 600px;
@@ -20,7 +23,11 @@ body {
     padding: 20px;
     box-sizing: border-box;
 }
-
+.input-field{
+    display:flex;
+    flex-direction:row;
+    gap: 20px;
+}
 /* Header styles */
 header {
     width: 100%;
@@ -41,6 +48,7 @@ header {
 /* Form styles */
 form {
     display: flex;
+    flex-direction: column;
     align-items: center;
     gap: 20px;
     width: 100%;
@@ -64,12 +72,14 @@ input[type="text"]::placeholder {
     text-align: center;
 }
 
-input[type="text"]:focus {
+input[type="text"]:focus{
     outline: none;
     border-bottom-color: #00CCCC;
 }
-
-input[type="submit"] {
+option{
+    background-color:#111111;
+}
+input[type="submit"], select {
     padding: 10px 0;
     font-size: 16px;
     background-color: transparent;
@@ -84,7 +94,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover,
-input[type="submit"]:focus {
+input[type="submit"]:focus, select:hover, select:focus{
     background-color: #00FFFF20;
     border-bottom-color: #00CCCC;
     outline: none;
@@ -104,7 +114,7 @@ main {
     }
     
     input[type="text"],
-    input[type="submit"] {
+    input[type="submit"], select {
         width: 100%;
     }
     

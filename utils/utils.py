@@ -16,13 +16,18 @@ def web(url):
             "content":res.text
             }
     return data
-def summarize(data):
+def summarize(data,task):
     ai.configure(api_key=os.getenv("GEN_KEY"))
 
     model = ai.GenerativeModel('gemini-1.5-flash')
     base_dir = os.path.dirname(__file__)
-    file_name = "video.md" if data['src']=='vid' else "article.md" 
-    file_path = os.path.join(base_dir,"prompts",file_name)
+    if task == 'summary':
+        file_name = "video.md" if data['src']=='vid' else "article.md" 
+        file_path = os.path.join(base_dir,"prompts",file_name)
+    elif task == 'wisdom':
+        file_path = os.path.join(base_dir, "prompts", "wisdom.md")
+    elif task == 'idea':
+        file_path = os.path.join(base_dir, "prompts", "idea.md")
     file = open(file_path)
     prompt = file.read()
     res = model.generate_content(prompt+data['content'])
