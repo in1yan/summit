@@ -37,14 +37,14 @@ def transcript(url):
     formatter = SRTFormatter()
     video = YouTube(url)
     id = video.video_id
-    thumbnail = video.thumbnail_url
-    title = video.title
+    # thumbnail = video.thumbnail_url
+    # title = video.title
     raw_transcript = YouTubeTranscriptApi.get_transcript(id)
     transcript = formatter.format_transcript(raw_transcript)
     data = {
         "src":"vid",
-        "title":title,
-        "thumbnail":thumbnail,
+        # "title":title,
+        # "thumbnail":thumbnail,
         "content":transcript
     }
     return data
