@@ -3,14 +3,18 @@ from youtube_transcript_api import YouTubeTranscriptApi
 from youtube_transcript_api.formatters import SRTFormatter
 from pytube import YouTube
 import requests
+from fake_useragent import UserAgent
 from dotenv import load_dotenv
 import os
 
 
 load_dotenv()
-
+ua = UserAgent()
 def web(url):
-    res = requests.get(url)
+    headers = {
+        'User-Agent':ua.random()
+    }
+    res = requests.get(url, headers=headers)
     data = {
             "src":"web",
             "content":res.text
