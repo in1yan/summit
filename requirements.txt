@@ -12,3 +12,4 @@ google-auth-httplib2
 google-generativeai
 googleapis-common-protos
 gunicorn
+python-dotenv
