@@ -18,8 +18,11 @@
                     <option value="wisdom" {% if task=='wisdom'%} selected {% endif %}>Extract wisdom</option>
                 </select>
             </div>
+            <div class="input-field">
+                <input type="submit" value="summarize">
+                <input type="button" value="clear" onclick="document.getElementById('url').value=''">
+            </div>
 
-            <input type="submit" value="summarize">
         </form>
     </div>
     <footer style="margin-top:100px;">

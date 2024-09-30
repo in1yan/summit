@@ -79,7 +79,7 @@ input[type="text"]:focus{
 option{
     background-color:#111111;
 }
-input[type="submit"], select {
+input[type="submit"], select, input[type="button"] {
     padding: 10px 0;
     font-size: 16px;
     background-color: transparent;
@@ -94,7 +94,7 @@ input[type="submit"], select {
 }
 
 input[type="submit"]:hover,
-input[type="submit"]:focus, select:hover, select:focus{
+input[type="submit"]:focus, select:hover, select:focus, input[type="button"]:hover,input[type="button"]:focus{
     background-color: #00FFFF20;
     border-bottom-color: #00CCCC;
     outline: none;
@@ -114,7 +114,7 @@ main {
     }
     
     input[type="text"],
-    input[type="submit"], select {
+    input[type="submit"], select, input[type="button"] {
         width: 100%;
     }
     

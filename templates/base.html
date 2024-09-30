@@ -12,11 +12,15 @@
 	<form action="{{url_for('summary')}}" method="POST">
 		<div class="input-field">
 		<input type="text" name="url" id="url" value="{{url}}">
-		<select name="task" id="task" onchange="this.form.submit()">
+		<select name="task" id="task">
 			<option value="summary" {% if task=='summary'%} selected {% endif %}>summary</option>
 			<option value="idea" {% if task=='idea'%} selected {% endif %}>Extract ideas</option>
 			<option value="wisdom" {% if task=='wisdom'%} selected {% endif %}>Extract wisdom</option>
 		</select>
+		</div>
+		<div class="input-field">
+			<input type="submit" value="summarize">
+			<input type="button" value="clear" onclick="document.getElementById('url').value=''">
 		</div>
 	</form>
 	</div>	
