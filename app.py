@@ -1,12 +1,16 @@
 from flask import Flask, render_template, request
 from utils.utils import transcript, summarize, web
-app = Flask(__name__)
 
+
+app = Flask(__name__)
 
 @app.route("/")
 def index():
     return render_template("index.html")
+
+
 @app.route("/summary", methods=["GET", "POST"])
+
 def summary():
     url = request.form.get('url')
     task = request.form.get('task')

@@ -1,7 +1,6 @@
 import google.generativeai as ai
-from youtube_transcript_api import YouTubeTranscriptApi
-from youtube_transcript_api.formatters import SRTFormatter
 from pytube import YouTube
+import yt_dlp
 import requests
 from fake_useragent import UserAgent
 from dotenv import load_dotenv
@@ -37,14 +36,30 @@ def summarize(data,task):
     res = model.generate_content(prompt+data['content'])
     return res.text
 
+def auto_subs(video_url, language='en'):
+    ydl_opts = {
+        'cookiefile':'yt.txt',
+        'subtitleslangs': [language],  # Language of the auto-generated subtitles (e.g., 'en' for English)
+        'subtitlesformat': 'srt',  # Format of the subtitles (can be 'vtt' or 'srt')
+        'skip_download': True,  # Only download subtitles, not the video
+        'writeautomaticsub':True,
+        # 'outtmpl': '%(title)s.%(ext)s',  # Output file template
+    }
+
+    with yt_dlp.YoutubeDL(ydl_opts) as ydl:
+        info = ydl.extract_info(video_url, download=False)
+        print(info['automatic_captions']['en'])
+        subs = info['automatic_captions']['en'][5]['url']
+        subs = requests.get(subs)
+        return subs.text
 def transcript(url):
-    formatter = SRTFormatter()
+    # formatter = SRTFormatter()
     video = YouTube(url)
-    id = video.video_id
+    # id = video.video_id
     # thumbnail = video.thumbnail_url
     # title = video.title
-    raw_transcript = YouTubeTranscriptApi.get_transcript(id)
-    transcript = formatter.format_transcript(raw_transcript)
+    # raw_transcript = YouTubeTranscriptApi.get_transcript(id, proxies={"http":"http://65.52.174.95:3128"})
+    transcript = auto_subs(url)
     data = {
         "src":"vid",
         # "title":title,
